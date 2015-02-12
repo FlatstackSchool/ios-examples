@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Master-->
+        <scene sceneID="cUi-kZ-frf">
+            <objects>
+                <navigationController title="Master" id="rS3-R9-Ivy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PNU-4c-L62" kind="relationship" relationship="rootViewController" id="7pf-qw-WdA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eq9-QA-ai8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-148" y="64"/>
+        </scene>
+        <!--Plot Controller-->
+        <scene sceneID="Rk4-de-O6Y">
+            <objects>
+                <viewController id="PNU-4c-L62" customClass="PlotController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UiX-s2-iLi"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Ac-e8-kxL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UgU-dh-irk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQd-Nc-Smf" customClass="CPTGraphHostingView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DQd-Nc-Smf" secondAttribute="trailing" id="9eh-ae-cih"/>
+                            <constraint firstItem="DQd-Nc-Smf" firstAttribute="top" secondItem="UiX-s2-iLi" secondAttribute="bottom" id="LVq-t8-bky"/>
+                            <constraint firstItem="6Ac-e8-kxL" firstAttribute="top" secondItem="DQd-Nc-Smf" secondAttribute="bottom" id="Ud0-h1-uA3"/>
+                            <constraint firstItem="DQd-Nc-Smf" firstAttribute="leading" secondItem="UgU-dh-irk" secondAttribute="leading" id="eBG-7o-fIz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1R8-Db-UTS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Y1-TS-C2V">
+                            <connections>
+                                <action selector="add:" destination="PNU-4c-L62" id="Z0O-Qw-I5w"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="graphHostingView" destination="DQd-Nc-Smf" id="xwJ-qf-HhE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NdH-V7-Nar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="64"/>
+        </scene>
+    </scenes>
+</document>
