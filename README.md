@@ -2,3 +2,4 @@
 
   1. Local Notifications
   2. Core Plot - библиотека для создания 2D графиков
+  3. UIActivityViewController (sharing between apps)
