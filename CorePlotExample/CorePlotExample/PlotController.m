@@ -202,7 +202,7 @@ typedef NS_ENUM(NSUInteger, CustomPlotStyle)
                                                yScaleType:CPTScaleTypeLinear];
     [graph applyTheme:[CPTTheme themeNamed:kBBTheme]];
 
-    //setting plot space
+//    //setting plot space
     CPTXYPlotSpace *plotSpace       = (CPTXYPlotSpace *)graph.defaultPlotSpace;
     plotSpace.allowsUserInteraction = YES;
     plotSpace.globalXRange          = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(50.0)
