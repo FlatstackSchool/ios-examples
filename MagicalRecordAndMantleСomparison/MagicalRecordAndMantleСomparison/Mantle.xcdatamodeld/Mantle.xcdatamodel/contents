@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14C1514" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Bug" representedClassName="Bug" parentEntity="Issue" syncable="YES">
+        <attribute name="deadlineDate" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Issue" representedClassName="Issue" isAbstract="YES" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="localValue" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="serverID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="Transformable" syncable="YES">
+            <userInfo>
+                <entry key="attributeValueClassName" value="NSURL"/>
+            </userInfo>
+        </attribute>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="issues" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Question" representedClassName="Question" parentEntity="Issue" syncable="YES">
+        <attribute name="answerTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nickName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serverID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="issues" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Issue" inverseName="user" inverseEntity="Issue" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Bug" positionX="-279" positionY="36" width="128" height="58"/>
+        <element name="Issue" positionX="16" positionY="21" width="128" height="195"/>
+        <element name="Question" positionX="-252" positionY="291" width="128" height="60"/>
+        <element name="User" positionX="241" positionY="-45" width="128" height="118"/>
+    </elements>
+</model>

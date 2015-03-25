@@ -1,0 +1,57 @@
+{
+    "issues": [
+               {
+               "id": 0,
+               "url": "https://github.com/Wynncraft/Issues/issues/1705",
+               "number": 1705,
+               "type": "issue",
+               "state": "open",
+               "user": {
+               "id": 0,
+               "first_name": "Tom",
+               "last_name": "Tullo",
+               "nick_name": "finlayj123"
+               },
+               "created_at": "2013-09-19 18:46:03",
+               "updated_at": "2013-09-20 20:46:03",
+               "title": "Tomb door in the wrath of the mummy quest not working",
+               "body": "I was trying to to the wrath of the mummy quest and when i came to the tomb door i had to work out the code which is 63814275 (or so i thought) i put it in, it didnt work so i tried again and it still didnt work so i went to th wiki and searched it up, i had gotten the code right it turned out but the door just wouldent open, i even tried changing servers. please fix this bug asap please thx.\nP.S. Sorry for my bad grammar"
+               },
+               {
+               "id": 1,
+               "url": "https://github.com/Wynncraft/Issues/issues/1704",
+               "number": 1704,
+               "state": "open",
+               "type": "question",
+               "user": {
+               "id": 1,
+               "first_name": "Ron",
+               "last_name": "Monato",
+               "nick_name": "BeforEtho"
+               },
+               "created_at": "2013-09-28 19:46:03",
+               "updated_at": "2013-10-28 18:46:03",
+               "title": "Cloud particle effect looks like the letter effect #1704",
+               "body": "I recently bought the cloud particle effect for my player in-game, BeforEtho. For some reason, the cloud effect does not work, it turns out looking like the letter effect and says that I've equipped the letter effect. Any ideas?",
+               "answer": "You need to use photon particle goodness!"
+               },
+               {
+               "id": 2,
+               "url": "https://github.com/Wynncraft/Issues/issues/1690",
+               "number": 1690,
+               "state": "closed",
+               "type": "bug",
+               "deadline_date": "2013-12-10 18:46:03",
+               "user": {
+               "id": 0,
+               "first_name": "Tom",
+               "last_name": "Tullo",
+               "nick_name": "finlayj123"
+               },
+               "created_at": "2013-09-28 19:46:03",
+               "updated_at": "2013-09-29 20:46:03",
+               "title": "Stuck in wall",
+               "body": "When ever I try to be archer I get loaded in to a wall and cant leave it's only with the archer class HELP!!!"
+               }
+               ]
+}

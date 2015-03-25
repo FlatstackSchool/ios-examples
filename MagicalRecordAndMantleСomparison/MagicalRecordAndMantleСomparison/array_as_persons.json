@@ -1,0 +1,53 @@
+{
+    "persons": [
+              {
+              "id": 0,
+              "first_name": "John",
+              "last_name": "Smith",
+              "age": 25,
+              "home_url": "http://yandex.ru",
+              "home_address": {
+              "id": 0,
+              "street_address": "21 2nd Street",
+              "city": "New York",
+              "state": "NY",
+              "postal_code": "10021"
+              },
+              "gender": {
+              "type": "male"
+              }
+              },
+              {
+              "id": 1,
+              "first_name": "Annet",
+              "last_name": "Smith",
+              "age": 27,
+              "home_address": {
+              "id": 1,
+              "street_address": "24 4nd Street",
+              "city": "New York",
+              "state": "NY",
+              "postal_code": "10031"
+              },
+              "gender": {
+              "type": "female"
+              }
+              },
+              {
+              "id": 2,
+              "first_name": "Paul",
+              "last_name": "Barret",
+              "age": 21,
+              "home_address": {
+              "id": 0,
+              "street_address": "21 2nd Street",
+              "city": "New York",
+              "state": "NY",
+              "postal_code": "10021"
+              },
+              "gender": {
+              "type": "male"
+              }
+              }
+              ]
+}

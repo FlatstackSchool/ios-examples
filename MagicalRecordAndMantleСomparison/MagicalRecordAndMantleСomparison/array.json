@@ -1,0 +1,33 @@
+[
+    {
+        "id": 0,
+        "first_name": "John",
+        "last_name": "Smith",
+        "age": 25,
+        "home_url": "http://yandex.ru",
+        "home_address": null,
+        "gender": {
+            "type": "male"
+        }
+    },
+    {
+        "id": 1,
+        "first_name": "Annet",
+        "last_name": "Smith",
+        "age": 27,
+        "home_address": null,
+        "gender": {
+            "type": "female"
+        }
+    },
+    {
+        "id": 2,
+        "first_name": "Paul",
+        "last_name": "Barret",
+        "age": 21,
+        "home_address": null,
+        "gender": {
+            "type": "male"
+        }
+    }
+]
