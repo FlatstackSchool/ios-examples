@@ -8,43 +8,44 @@
 В _AppDelegate_ создается стек ```[MagicalRecord setupAutoMigratingCoreDataStack]```б данные сохраняются и парсятся из четырех разных JSON:
 * конкретного объекта (разница в значении по ключу _age_):
 
-    1. ```- (void)johnSmith``` - _age_ = 25
+  1. ```- (void)johnSmith``` - _age_ = 25
 
-    2. ```- (void)updatedJohnSmith``` - _age_ = 27
+  2. ```- (void)updatedJohnSmith``` - _age_ = 27
 
 * массива из объектов (разница в структуре JSON):
 
-    1. ```- (void)registerUsers``` - JSON с массивом объектов
+  1. ```- (void)registerUsers``` - JSON с массивом объектов
 
-    2. ```- (void)registerUsersViaOtherEndpoint``` - JSON из массива объектов по ключу _persons_
+  2. ```- (void)registerUsersViaOtherEndpoint``` - JSON из массива объектов по ключу _persons_
 
 # Mantle
 
 Для **Mantle** сгенерированы 4 модели - **Issue**, унаследованные от неё **Bug** и **Question**, **User**. 
 Эта библиотека для сериализации и мапинга использует паттерн _Adapter_ и для сериализации используются классы **MTLJSONAdapter** и наследники от **MTLModel**, которые должны реализовать протокол **MTLJSONSerializing**. В этом протоколе для наследника от класса **MTLModel** мы описываем «карту» для сериализации методом:
 
-	```+ (NSDictionary *)JSONKeyPathsByPropertyKey```. 
+```+ (NSDictionary *)JSONKeyPathsByPropertyKey```. 
 
 Также мы можем указать, как конвертировать конкретное JSON значение с помощью **NSValueTransformer** и метода:
 
-	```+ (NSValueTransformer *)JSONTransformerForKey:(NSString *)key```
+```+ (NSValueTransformer *)JSONTransformerForKey:(NSString *)key```
 
 Класс, который должен быть создан через метод (это удобно, если мы имеем много наследников от одного абстрактного класса):
 
-	```+ (Class)classForParsingJSONDictionary:(NSDictionary *)JSONDictionary```
+```+ (Class)classForParsingJSONDictionary:(NSDictionary *)JSONDictionary```
 
 Используя **MTLJSONAdapter** делаем сериализацию данных: 
 * для конкретного объекта:
 
-	```+ (id)modelOfClass:(Class)modelClass fromJSONDictionary:(NSDictionary *)JSONDictionary error:(NSError **)error```
+```+ (id)modelOfClass:(Class)modelClass fromJSONDictionary:(NSDictionary *)JSONDictionary error:(NSError **)error```
 
 * для массива объектов:
 
-	```+ (NSArray *)modelsOfClass:(Class)modelClass fromJSONArray:(NSArray *)JSONArray error:(NSError **)error```
+```+ (NSArray *)modelsOfClass:(Class)modelClass fromJSONArray:(NSArray *)JSONArray error:(NSError **)error```
 
 Для получения **NSManagedObject** с помощью **MTLManagedObjectAdapter** нужно использовать метод:
-	```+ (id)managedObjectFromModel:(MTLModel<MTLManagedObjectSerializing> *)model insertingIntoContext:(NSManagedObjectContext *)context error:(NSError **)error```
+
+```+ (id)managedObjectFromModel:(MTLModel<MTLManagedObjectSerializing> *)model insertingIntoContext:(NSManagedObjectContext *)context error:(NSError **)error```
 
 С помощью отдельно написанного singleton **CoreDataManager** создается стек для _CoreData_ и главного контекста _managedObjectContext_. Пример сохранения данных описан в _AppDelegate_ в методе:
 
-	```- (void)registerIssues```
+```- (void)registerIssues```
