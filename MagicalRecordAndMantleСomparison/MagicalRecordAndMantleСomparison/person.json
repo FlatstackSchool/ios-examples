@@ -1,0 +1,10 @@
+{
+    "id": 0,
+    "first_name": "John",
+    "last_name": "Smith",
+    "age": 25,
+    "home_url": "http://yandex.ru",
+    "gender": {
+        "type": "male"
+    }
+}

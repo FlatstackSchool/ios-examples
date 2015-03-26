@@ -1,0 +1,20 @@
+PODS:
+  - MagicalRecord (2.2):
+    - MagicalRecord/Core (= 2.2)
+  - MagicalRecord/Core (2.2)
+  - Mantle (1.5.4):
+    - Mantle/extobjc (= 1.5.4)
+  - Mantle/extobjc (1.5.4)
+  - NSDate-Extensions (0.0.1)
+
+DEPENDENCIES:
+  - MagicalRecord
+  - Mantle
+  - NSDate-Extensions
+
+SPEC CHECKSUMS:
+  MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
+  Mantle: d5fbaf30fbc58031223af13812c060e15934a1fe
+  NSDate-Extensions: dcbef8675a9aed6d9dabfdcd4689300e177277d0
+
+COCOAPODS: 0.35.0
