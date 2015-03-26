@@ -8,15 +8,13 @@
 В _AppDelegate_ создается стек ```[MagicalRecord setupAutoMigratingCoreDataStack]```б данные сохраняются и парсятся из четырех разных JSON:
 * конкретного объекта (разница в значении по ключу _age_):
 
-  1. ```- (void)johnSmith``` - _age_ = 25
-
-  2. ```- (void)updatedJohnSmith``` - _age_ = 27
+```- (void)johnSmith``` - _age_ = 25
+```- (void)updatedJohnSmith``` - _age_ = 27
 
 * массива из объектов (разница в структуре JSON):
 
-  1. ```- (void)registerUsers``` - JSON с массивом объектов
-
-  2. ```- (void)registerUsersViaOtherEndpoint``` - JSON из массива объектов по ключу _persons_
+```- (void)registerUsers``` - JSON с массивом объектов
+```- (void)registerUsersViaOtherEndpoint``` - JSON из массива объектов по ключу _persons_
 
 # Mantle
 
