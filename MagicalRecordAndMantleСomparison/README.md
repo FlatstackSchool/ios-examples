@@ -1,12 +1,9 @@
-# Local Notification Example
+# Compare [Magical Record](https://github.com/MagicalPanda/MagicalRecord) and [Mantle](https://github.com/Mantle/Mantle).
 
-Пример локальных уведомлений в приложении. Включает в себя:
+В данном примере проекта описывается пример сериализации из JSON и маппинга данных в CoreData через библиотеки Mantle и Magical Record. В корне проекта есть папки с отдельными бд и сущностями для каждого библиотеки отдельно. С помощью препроцессорной константы ```TEST_MAGICAL_RECORD``` можно переключаться между логикой работы библиотек. В AppDelegate происходит запись или обновление записей, в MasterViewController отображаются данные и управление ими и в DetailViewController отображается описание выбранного объекта.
 
- 1. Регистрация локальных нотификаций. (реализована в методе ```registerUserNotificationSettings:```)
- 2. Регистрация локальных нотификаций с действиями. (реализована в методе ```registrActionNotif:```)
- 3. Отправка локальных нотификаций по таймеру. (методы ```addNotification:``` и ```addActionNotif:```)
- 4. Обработка открытия приложения из уведомления. (метод ```application:didReceiveLocalNotification:```)
- 5. Обработка нажатия кнопки на нотификации. (методы ```application:handleActionWithIdentifier:```)
- 6. Отмена локальных уведомлений из приложения. (пример в методе ```viewDidLoad``` в классе ```ViewController```)
+Для Magical Record сгенерированы 2 модели - Person и Address. Для сериализации присутствуют 4 разных JSON с одинаковыми ключами. Attributes у Person мапятся с помощью ключа mappedKeyName, где value - ключ в самом JSON. Для Enitites у Person есть ключ relatedByAttribute, которое указывает уникальное property у класса; по нему мы будем проверять записи в бд на уникальность. Для мапинга relationship Address у Person используется ключ mappedKeyName и уникальность объекта по ключу relatedByAttribute.
+В AppDelegate создается стек и парсятся данные из четырех разных JSON с разными случаями. Например, в методах ```- (void)johnSmith``` и ```- (void)updatedJohnSmith``` пример добавления или обновления записи в бд конкретного объекта. В методах ```- (void)registerUsers``` и ```- (void)registerUsersViaOtherEndpoint``` пример добавления нескольких объектов.
 
-Пример написан по [этой статье](http://www.appcoda.com/local-notifications-ios8/).
+Для Mantle сгенерированы 4 модели - **Issue**, унаследованные от неё **Bug** и **Question**, **User**. Эта библиотека для сериализации и мапинга использует паттерн Adapter и для сериализации используются классы **MTLJSONAdapter** и наследники от **MTLModel**, которые должны реализовать протокол MTLJSONSerializing. В этом протоколе для наследника от класса **MTLModel** мы описываем «карту» для сериализации методам ```+ (NSDictionary *)JSONKeyPathsByPropertyKey```. Также мы можем указать, как конвертировать конкретное JSON значение с помощью **NSValueTransformer** и метода ```+ (NSValueTransformer *)JSONTransformerForKey:(NSString *)key```, а также класс, который должен быть создан через метод ```+ (Class)classForParsingJSONDictionary:(NSDictionary *)JSONDictionary``` (это удобно, если мы имеем много наследников от одного абстрактного класса). Используя **MTLJSONAdapter** делаем сериализацию данных ```+ (id)modelOfClass:(Class)modelClass fromJSONDictionary:(NSDictionary *)JSONDictionary error:(NSError **)error``` для одного объекта или ```+ (NSArray *)modelsOfClass:(Class)modelClass fromJSONArray:(NSArray *)JSONArray error:(NSError **)error``` для массива. И для получения **NSManagedObject** мы используем **MTLManagedObjectAdapter** метод ```+ (id)managedObjectFromModel:(MTLModel<MTLManagedObjectSerializing> *)model insertingIntoContext:(NSManagedObjectContext *)context error:(NSError **)error```. 
+
