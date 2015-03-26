@@ -9,11 +9,13 @@
 * конкретного объекта (разница в значении по ключу _age_):
 
 ```- (void)johnSmith``` - _age_ = 25
+
 ```- (void)updatedJohnSmith``` - _age_ = 27
 
 * массива из объектов (разница в структуре JSON):
 
 ```- (void)registerUsers``` - JSON с массивом объектов
+
 ```- (void)registerUsersViaOtherEndpoint``` - JSON из массива объектов по ключу _persons_
 
 # Mantle
