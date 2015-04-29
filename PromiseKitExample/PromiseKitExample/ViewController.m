@@ -20,25 +20,22 @@
 - (void)viewDidLoad {
     [self showUser];
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
--(PMKPromise*)createUser:(NSString*) name{
+- (PMKPromise*)createUser:(NSString *)name {
    return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
     
        if ([name isEqualToString:@""]) {
            NSError*error = [[NSError alloc] initWithDomain:@"No name" code:0 userInfo:nil];
            reject(error);
-       }
-       else{
-          User* person = [User MR_createEntity];
+       }else{
+           User* person = [User MR_createEntity];
            person.name = name;
            person.age = @30;
            [[NSManagedObjectContext MR_defaultContext] MR_saveOnlySelfWithCompletion:^(BOOL success, NSError *error) {
                if (success) {
                    fulfill(@"Saved");
-               }
-               else{
+               }else{
                    reject(error);
                }
            }];
@@ -47,7 +44,7 @@
    }];
 }
 
--(IBAction)addUser:(id)sender{
+- (IBAction)addUser:(id)sender {
     [self createUser:self.nameTextField.text].then(^{
         UIAlertView*alert = [[UIAlertView alloc] initWithTitle:nil message:@"User created" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
         [alert show];
@@ -60,7 +57,7 @@
     });
 }
 
--(void)showUser{
+- (void)showUser {
     NSArray* users =  [User MR_findAll];
     NSString*str =@"";
     for (User * person in users) {
@@ -70,26 +67,19 @@
     
 }
 
--(IBAction)removeAllUsers:(id)sender{
+- (IBAction)removeAllUsers:(id)sender {
     [UILabel promiseWithDuration:0.3 animations:^{
-        
         CGRect frame = self.usersLabel.frame;
         frame.origin.x = frame.origin.x-600;
         self.usersLabel.frame = frame;
-        
     }].then(^{
-        
          [User MR_truncateAll];
          self.usersLabel.text = @"";
-        
     }).finally(^{
-        
         CGRect frame = self.usersLabel.frame;
         frame.origin.x = frame.origin.x+600;
         self.usersLabel.frame = frame;
-        
     });
-   
 }
 
 - (void)didReceiveMemoryWarning {

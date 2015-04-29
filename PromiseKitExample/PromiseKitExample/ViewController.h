@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UILabel *usersLabel;
 
--(IBAction)removeAllUsers:(id)sender;
--(IBAction)addUser:(id)sender;
+- (IBAction)removeAllUsers:(id)sender;
+- (IBAction)addUser:(id)sender;
 @end
 
