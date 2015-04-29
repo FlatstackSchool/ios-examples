@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpl-2R-Eox">
+                                <rect key="frame" x="125" y="144" width="80" height="30"/>
+                                <state key="normal" title="Create user">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fmH-tu-GLu"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6bn-w2-ahn">
+                                <rect key="frame" x="55" y="106" width="221" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="221" id="XhI-zh-PWt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsZ-7p-3ZP">
+                                <rect key="frame" x="55" y="225" width="212" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="FpT-bj-yPR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2B-QT-w9h">
+                                <rect key="frame" x="107" y="166" width="118" height="30"/>
+                                <state key="normal" title="Remove all users">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeAllUsers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qLf-0S-pqq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IsZ-7p-3ZP" firstAttribute="top" secondItem="Gpl-2R-Eox" secondAttribute="bottom" constant="51" id="9ji-Bn-nmC"/>
+                            <constraint firstAttribute="centerX" secondItem="6bn-w2-ahn" secondAttribute="centerX" constant="-5.5" id="Itl-3o-aFr"/>
+                            <constraint firstItem="6bn-w2-ahn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="86" id="MVe-0f-EjQ"/>
+                            <constraint firstAttribute="centerX" secondItem="K2B-QT-w9h" secondAttribute="centerX" constant="-5.5" id="QBf-2S-TKJ"/>
+                            <constraint firstItem="K2B-QT-w9h" firstAttribute="top" secondItem="Gpl-2R-Eox" secondAttribute="bottom" constant="-8" id="Xyc-nH-Tc6"/>
+                            <constraint firstItem="Gpl-2R-Eox" firstAttribute="top" secondItem="6bn-w2-ahn" secondAttribute="bottom" constant="8" id="i1c-9e-sXn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IsZ-7p-3ZP" secondAttribute="trailing" constant="37" id="oBl-bN-tba"/>
+                            <constraint firstItem="IsZ-7p-3ZP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="39" id="pBt-Km-sSM"/>
+                            <constraint firstAttribute="centerX" secondItem="Gpl-2R-Eox" secondAttribute="centerX" constant="-5" id="xX0-wd-6Bl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="6bn-w2-ahn" id="luI-JG-PMY"/>
+                        <outlet property="usersLabel" destination="IsZ-7p-3ZP" id="Hgd-jD-RdA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="335"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

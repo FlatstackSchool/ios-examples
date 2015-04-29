@@ -1,0 +1,56 @@
+PODS:
+  - MagicalRecord (2.2):
+    - MagicalRecord/Core (= 2.2)
+  - MagicalRecord/Core (2.2)
+  - OMGHTTPURLRQ (2.1):
+    - OMGHTTPURLRQ/RQ (= 2.1)
+  - OMGHTTPURLRQ/FormURLEncode (2.1)
+  - OMGHTTPURLRQ/RQ (2.1):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (2.1)
+  - PromiseKit (1.5.2):
+    - PromiseKit/CALayer (= 1.5.2)
+    - PromiseKit/NSNotificationCenter (= 1.5.2)
+    - PromiseKit/NSURLConnection (= 1.5.2)
+    - PromiseKit/Pause (= 1.5.2)
+    - PromiseKit/UIActionSheet (= 1.5.2)
+    - PromiseKit/UIAlertView (= 1.5.2)
+    - PromiseKit/UIView (= 1.5.2)
+    - PromiseKit/UIViewController (= 1.5.2)
+    - PromiseKit/Until (= 1.5.2)
+    - PromiseKit/When (= 1.5.2)
+  - PromiseKit/CALayer (1.5.2):
+    - PromiseKit/Promise
+  - PromiseKit/NSNotificationCenter (1.5.2):
+    - PromiseKit/Promise
+  - PromiseKit/NSURLConnection (1.5.2):
+    - OMGHTTPURLRQ
+    - PromiseKit/Promise
+  - PromiseKit/Pause (1.5.2):
+    - PromiseKit/Promise
+  - PromiseKit/Promise (1.5.2)
+  - PromiseKit/UIActionSheet (1.5.2):
+    - PromiseKit/Promise
+  - PromiseKit/UIAlertView (1.5.2):
+    - PromiseKit/Promise
+  - PromiseKit/UIView (1.5.2):
+    - PromiseKit/Promise
+  - PromiseKit/UIViewController (1.5.2):
+    - PromiseKit/Promise
+  - PromiseKit/Until (1.5.2):
+    - PromiseKit/Promise
+    - PromiseKit/When
+  - PromiseKit/When (1.5.2):
+    - PromiseKit/Promise
+
+DEPENDENCIES:
+  - MagicalRecord
+  - PromiseKit
+
+SPEC CHECKSUMS:
+  MagicalRecord: f8a56bb87ab6552f20c4bb8681a1958a197ea3cd
+  OMGHTTPURLRQ: f8c515dfd2f57a5d74c710978f600231f52afec5
+  PromiseKit: b333c1baae651ed1fdfb4f6f4ef18d7ca118931e
+
+COCOAPODS: 0.36.3
