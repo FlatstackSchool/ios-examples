@@ -16,6 +16,9 @@ class ReminderCell: UITableViewCell {
     
     private var reminder:EKReminder!
     
+    //Get group user defaults (for iOS app and for extension)
+    private var pref:NSUserDefaults = NSUserDefaults(suiteName: "group.todayReminderWidget")!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -53,7 +56,6 @@ class ReminderCell: UITableViewCell {
     //MARK: Helpers
     
     private func reminderIsStored () -> Bool {
-        var pref = NSUserDefaults(suiteName: "group.todayReminderWidget")!
         
         if let let reminders = pref.objectForKey("reminders") as? Array<String> {
             return contains(reminders, reminder.calendarItemIdentifier)
@@ -63,7 +65,6 @@ class ReminderCell: UITableViewCell {
     }
     
     private func getReminders () -> Array<String> {
-        var pref = NSUserDefaults(suiteName: "group.todayReminderWidget")!
         
         if let reminders = pref.objectForKey("reminders") as? Array<String> {
             return reminders
@@ -73,8 +74,6 @@ class ReminderCell: UITableViewCell {
     }
     
     private func saveReminders (rems:Array<String>) {
-        var pref = NSUserDefaults(suiteName: "group.todayReminderWidget")!
-        
         pref.setObject(rems, forKey: "reminders")
         pref.synchronize()
     }

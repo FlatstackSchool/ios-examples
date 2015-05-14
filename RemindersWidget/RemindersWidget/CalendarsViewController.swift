@@ -17,6 +17,7 @@ class CalendarsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Get calendars
         store.requestAccessToEntityType(EKEntityTypeReminder, completion: { (granted:Bool, error:NSError!) -> Void in
             var calendars = self.store.calendarsForEntityType(EKEntityTypeReminder)
             

@@ -19,6 +19,7 @@ class RemindersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Get incomplete remiders for current calendar
         var predicate:NSPredicate = self.store.predicateForIncompleteRemindersWithDueDateStarting(nil, ending: nil, calendars: [calendar])
         
         self.store.fetchRemindersMatchingPredicate(predicate, completion: { (events:[AnyObject]!) -> Void in

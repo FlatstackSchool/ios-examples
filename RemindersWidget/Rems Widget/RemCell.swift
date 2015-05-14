@@ -26,7 +26,7 @@ class RemCell: UITableViewCell {
         
         titleLabel.text = rem.title
         if rem.dueDate != nil {
-            startDueDateTimer()
+            self.startDueDateTimer()
         } else {
             leftTimeLabel.hidden = true
         }
@@ -41,6 +41,7 @@ class RemCell: UITableViewCell {
         updateDueTime()
     }
     
+    //Set date string
     private func updateDueTime () {
         
         let minute:NSTimeInterval   =   60
