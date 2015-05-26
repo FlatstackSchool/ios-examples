@@ -6,5 +6,5 @@
  2. Чтение данных (реализовано в методе `getUserData/readMostRecentSample`)
  3. Запись данных (метод `writeSample`)
 
-Пример написан с помощью этой [статьи].
+Пример написан с помощью этой [статьи](http://www.raywenderlich.com/86336/ios-8-healthkit-swift-getting-started).
 (**Некоторые методы устарели**)
