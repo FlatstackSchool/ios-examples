@@ -13,7 +13,7 @@ class CalendarsViewController: UITableViewController {
     
     var store:EKEventStore = EKEventStore()
     var lists:[EKCalendar] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +34,7 @@ class CalendarsViewController: UITableViewController {
             })
         })
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

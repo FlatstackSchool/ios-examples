@@ -10,7 +10,7 @@ import UIKit
 import EventKit
 
 class RemCell: UITableViewCell {
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var leftTimeLabel: UILabel!
     @IBOutlet weak var colorView: UIView!
@@ -20,7 +20,7 @@ class RemCell: UITableViewCell {
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
-
+    
     func prepareCell (rem:EKReminder) {
         reminder = rem
         

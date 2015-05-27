@@ -22,7 +22,7 @@ class ReminderCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -36,7 +36,7 @@ class ReminderCell: UITableViewCell {
         
         titleLabel.text = reminder.title
     }
-
+    
     @IBAction func switchValueChanged(sender: AnyObject) {
         var reminders = getReminders()
         

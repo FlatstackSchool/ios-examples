@@ -15,7 +15,7 @@ class RemindersViewController: UITableViewController {
     var calendar:EKCalendar!
     
     var reminders:[EKReminder] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,27 +36,27 @@ class RemindersViewController: UITableViewController {
             })
         })
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return reminders.count
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ReminderCell") as! ReminderCell
         
         cell.prepareCell(reminders[indexPath.row])
-
+        
         return cell
     }
-
+    
 }
