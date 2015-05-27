@@ -43,7 +43,7 @@ enum NoteType:String {
 }
 
 class HealthManager: NSObject {
-   
+    
     let healthKitStore:HKHealthStore = HKHealthStore()
     let pref = NSUserDefaults.standardUserDefaults()
     var notes:[Note] = []
@@ -113,7 +113,7 @@ class HealthManager: NSObject {
                 
                 completion?(success: success, error: error)
                 
-                })
+            })
             
         }
         
@@ -244,9 +244,12 @@ class HealthManager: NSObject {
             
             var semaphore = dispatch_semaphore_create(0)
             
-            self.readMostRecentSample(heightQty, completion: { (sample:HKQuantitySample!, error:NSError!) -> Void in
+            self.readMostRecentSample(heightQty, completion: { (sample:HKQuantitySample?, error:NSError!) -> Void in
                 if error == nil {
-                    height = sample.quantity.doubleValueForUnit(HKUnit.meterUnit())*100
+                    if let _sample = sample {
+                        height = _sample.quantity.doubleValueForUnit(HKUnit.meterUnit())*100
+                    }
+                    
                 } else {
                     println("Error reading Height: \(error)")
                 }
@@ -264,9 +267,12 @@ class HealthManager: NSObject {
             
             var semaphore = dispatch_semaphore_create(0)
             
-            self.readMostRecentSample(weightQty, completion: { (sample:HKQuantitySample!, error:NSError!) -> Void in
+            self.readMostRecentSample(weightQty, completion: { (sample:HKQuantitySample?, error:NSError!) -> Void in
                 if error == nil {
-                    weight = sample.quantity.doubleValueForUnit(HKUnit.gramUnit())/1000
+                    if let _sample = sample {
+                        weight = _sample.quantity.doubleValueForUnit(HKUnit.gramUnit())/1000
+                    }
+                    
                 } else {
                     println("Error reading Weight: \(error)")
                 }
@@ -283,7 +289,7 @@ class HealthManager: NSObject {
         return User(age: age, height: height, weight: weight, blood: blood, sex: sex)
     }
     
-    private func readMostRecentSample(sampleType:HKSampleType , completion: ((HKQuantitySample!, NSError!) -> Void)!)
+    private func readMostRecentSample(sampleType:HKSampleType , completion: ((HKQuantitySample?, NSError!) -> Void)!)
     {
         
         // 1. Build the Predicate
