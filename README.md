@@ -1,3 +1,7 @@
+#Examples
+
+* [HealthKit example](/BloodyProject) (Пример использования HealthKit)
+
 #Cocoa
 
 * [UILocalNotifications](https://developer.apple.com/library/ios/documentation/iPhone/Reference/UILocalNotification_Class/) (object specifies a notification that an app can schedule for presentation at a specific date and time)
