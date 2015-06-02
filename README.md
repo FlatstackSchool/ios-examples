@@ -1,6 +1,9 @@
 #Examples
 
 * [HealthKit example](/BloodyProject) (Пример использования HealthKit)
+* [WatchKit example](/RemindersWidget) (Пример использования WathcKit)
+* [Reminders example](/RemindersWidget) (Пример использования Напоминаний)
+* [Today Extension example](/RemindersWidget) (Пример использования виджетов)
 
 #Cocoa
 

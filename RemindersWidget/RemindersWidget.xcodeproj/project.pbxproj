@@ -169,8 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				21AD60CA1AB9672F00A218FA /* Rems Widget.entitlements */,
-				211616B51AB8CB0A00BBEF4D /* TodayViewController.swift */,
 				211616B71AB8CB0A00BBEF4D /* MainInterface.storyboard */,
+				211616B51AB8CB0A00BBEF4D /* TodayViewController.swift */,
 				21AD60CC1AB96BF100A218FA /* RemCell.swift */,
 				211616B31AB8CB0A00BBEF4D /* Supporting Files */,
 			);
