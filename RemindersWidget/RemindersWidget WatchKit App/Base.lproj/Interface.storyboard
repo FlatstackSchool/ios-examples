@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="RemindersWidget_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="aha-LC-Cbt">
+                            <items>
+                                <tableRow identifier="ReminderCell" id="Cf7-A2-bXx" customClass="ReminderRow" customModule="RemindersWidget_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="HiX-fx-h5g">
+                                        <items>
+                                            <label width="12" height="1" alignment="left" text="!!!" id="3s7-OH-pJJ"/>
+                                            <label width="1" height="1" alignment="left" text="Title" id="oJN-c1-jcb">
+                                                <fontDescription key="font" type="system" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="priorityLabel" destination="3s7-OH-pJJ" id="WGd-u3-Et8"/>
+                                        <outlet property="textLabel" destination="oJN-c1-jcb" id="3CE-oU-30a"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="NWu-c3-6Sc">
+                        <items>
+                            <menuItem title="Uncompleted" icon="decline" id="znE-X8-3Xu">
+                                <connections>
+                                    <action selector="uncompletedTapped" destination="AgC-eL-Hgc" id="Wmq-BM-eIF"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Completed" icon="accept" id="9Zo-IH-B8s">
+                                <connections>
+                                    <action selector="completedTapped" destination="AgC-eL-Hgc" id="CY3-J0-cDJ"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Add" icon="add" id="bra-LV-onm">
+                                <connections>
+                                    <action selector="addTapped" destination="AgC-eL-Hgc" id="knJ-ky-Pfg"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Settings" icon="more" id="qJ5-Qi-Py5">
+                                <connections>
+                                    <action selector="settingsTapped" destination="AgC-eL-Hgc" id="ErL-gg-vKW"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="table" destination="aha-LC-Cbt" id="8Cq-79-HH4"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="100"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="gwF-Ia-mVh">
+            <objects>
+                <controller identifier="SettingsController" title="Settings" id="rbb-Ln-IeN" customClass="SettingsController" customModule="RemindersWidget_WatchKit_Extension">
+                    <items>
+                        <switch width="1" alignment="left" value="YES" title="Show priority" id="fdg-gm-ouM">
+                            <connections>
+                                <action selector="switchValueChanged:" destination="rbb-Ln-IeN" id="3at-Q4-Ra7"/>
+                            </connections>
+                        </switch>
+                        <separator alignment="left" id="7dA-qf-PZp">
+                            <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </separator>
+                        <label alignment="center" text="Font size" id="Mlw-Oz-zKD"/>
+                        <slider width="1" alignment="left" value="3" maximum="6" steps="6" id="hBO-OG-WgH">
+                            <connections>
+                                <action selector="fontSizeChanged:" destination="rbb-Ln-IeN" id="U8B-Bu-HCp"/>
+                            </connections>
+                        </slider>
+                    </items>
+                    <connections>
+                        <outlet property="fontSizeSlider" destination="hBO-OG-WgH" id="5kX-DV-EXb"/>
+                        <outlet property="prioritySwitch" destination="fdg-gm-ouM" id="QtZ-ii-LhY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="-139"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="2uy-LR-HjU">
+            <objects>
+                <controller identifier="Reminder" title="Detail" id="Tc0-fV-Ria" customClass="ReminderDetailController" customModule="RemindersWidget_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="ttt-Mf-BXk">
+                            <items>
+                                <label alignment="left" text="Reminder title" numberOfLines="0" id="Jyt-0g-L80">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" height="119" alignment="left" layout="vertical" id="nDb-48-gef">
+                            <items>
+                                <label alignment="left" text="Calendar name" id="0aS-Aq-8SL">
+                                    <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                </label>
+                                <group width="1" alignment="left" id="dvY-Kv-v0d">
+                                    <items>
+                                        <label alignment="left" text="Priority:" id="Hc2-Ht-QsO"/>
+                                        <label alignment="right" text="Medium" id="ozH-jX-YUo"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="x5K-sh-e3v">
+                                    <items>
+                                        <label alignment="left" text="Date:" id="QtF-f1-ddb"/>
+                                        <label alignment="right" text="12:05:2015" id="a2G-EC-kBK"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="hNk-I4-fKc">
+                                    <items>
+                                        <label alignment="left" text="Left:" id="hrz-xa-L5N"/>
+                                        <label alignment="right" text="2 days" id="6Kf-04-rp2"/>
+                                    </items>
+                                </group>
+                                <button width="1" height="30" alignment="center" verticalAlignment="center" title="Done" id="Yio-wW-dge">
+                                    <connections>
+                                        <action selector="doneTapped" destination="Tc0-fV-Ria" id="sy1-bv-fqD"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="calendarLabel" destination="0aS-Aq-8SL" id="ltq-dz-fGC"/>
+                        <outlet property="dateGroup" destination="x5K-sh-e3v" id="x06-aJ-0EI"/>
+                        <outlet property="dateTitleLabel" destination="QtF-f1-ddb" id="bvO-aZ-93q"/>
+                        <outlet property="dateValueLabel" destination="a2G-EC-kBK" id="fkM-q0-Jzk"/>
+                        <outlet property="doneButton" destination="Yio-wW-dge" id="I3w-dH-znv"/>
+                        <outlet property="leftGroup" destination="hNk-I4-fKc" id="9Cw-4Y-LMQ"/>
+                        <outlet property="leftTitleLabel" destination="hrz-xa-L5N" id="8MZ-6l-0gB"/>
+                        <outlet property="leftValue" destination="6Kf-04-rp2" id="Dxg-Vf-Crx"/>
+                        <outlet property="priorityGroup" destination="dvY-Kv-v0d" id="QQS-Nf-peG"/>
+                        <outlet property="priorityValueLabel" destination="ozH-jX-YUo" id="Fvn-Dh-cmm"/>
+                        <outlet property="titleLabel" destination="Jyt-0g-L80" id="SuT-YP-GcU"/>
+                        <segue destination="avq-PY-YqO" kind="relationship" relationship="nextPage" id="7DA-1J-fad"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="434" y="100"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="3tx-uO-X5F">
+            <objects>
+                <controller identifier="ReminderNotesPage" title="Notes" id="avq-PY-YqO" customClass="NotesPageController" customModule="RemindersWidget_WatchKit_Extension">
+                    <items>
+                        <label width="0.90000000000000002" height="24" alignment="center" text="Notes is missing..." textAlignment="left" numberOfLines="0" id="1ou-iW-BGZ">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="Dictate" id="lVc-cc-9iN">
+                            <connections>
+                                <action selector="dictateTapped" destination="avq-PY-YqO" id="igp-Yz-lbM"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="commentLabel" destination="1ou-iW-BGZ" id="yS4-t2-g7H"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="629" y="100"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" bottomTemplateType="groupBody1Footer" id="0uZ-2p-rRc" customClass="GlanceController" customModule="RemindersWidget_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" layout="vertical" id="t8f-Gd-c4y">
+                            <items>
+                                <label width="1" height="1" alignment="left" text="Reminder title" numberOfLines="0" id="Euf-qa-KMh">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" layout="vertical" id="uCw-4Q-Ouw">
+                            <items>
+                                <group width="1" alignment="left" id="Zyx-lL-cwm">
+                                    <items>
+                                        <label alignment="left" text="Priority:" id="JNH-PR-JOC"/>
+                                        <label alignment="right" text="Medium" id="YOZ-Ll-3Fc"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="g9K-QX-SBS">
+                                    <items>
+                                        <label alignment="left" text="Date:" id="iz5-dr-sSZ"/>
+                                        <label alignment="right" text="12:05:2015" id="8nf-4r-fBg"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <label alignment="left" text="2 days" id="371-mO-uol"/>
+                        <label alignment="left" text="Calendar name" id="BQV-YV-MKF"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="calendarLabel" destination="BQV-YV-MKF" id="wc7-rb-MC0"/>
+                        <outlet property="dateGroup" destination="g9K-QX-SBS" id="h0b-Oh-cp4"/>
+                        <outlet property="dateTitleLabel" destination="iz5-dr-sSZ" id="81l-wk-t1R"/>
+                        <outlet property="dateValueLabel" destination="8nf-4r-fBg" id="f7O-L7-5T7"/>
+                        <outlet property="leftValue" destination="371-mO-uol" id="9Fi-NB-tMQ"/>
+                        <outlet property="priorityGroup" destination="Zyx-lL-cwm" id="fqQ-Bu-wMx"/>
+                        <outlet property="priorityValueLabel" destination="YOZ-Ll-3Fc" id="De3-DT-QGs"/>
+                        <outlet property="titleLabel" destination="Euf-qa-KMh" id="h3w-r1-wtW"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Reminder title" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="ReminderNotification" id="JfB-70-Muf">
+                        <color key="sashColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </notificationCategory>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1031"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="RemindersWidget_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Remider title" id="NLz-LS-6TO"/>
+                        <label alignment="left" text="Calendar name" id="V8e-8X-QGB">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <group width="1" alignment="left" id="sTh-ID-zKS">
+                            <items>
+                                <label alignment="left" text="Priority:" id="1EF-VG-0cm"/>
+                                <label alignment="right" text="Medium" id="w3p-ej-8iQ"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="calendarLabel" destination="V8e-8X-QGB" id="744-ph-8zn"/>
+                        <outlet property="priorityLabel" destination="w3p-ej-8iQ" id="Z5f-Tt-8Vb"/>
+                        <outlet property="titleLabel" destination="NLz-LS-6TO" id="XRX-nL-wkA"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="434" y="1031"/>
+        </scene>
+    </scenes>
+</document>

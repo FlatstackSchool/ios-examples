@@ -1,0 +1,26 @@
+{
+    "aps": {
+        "alert": {
+            "body": "Покормить собаку",
+            "title": "Оповещение"
+        },
+        "category": "ReminderNotification"
+    },
+    
+    "WatchKit Simulator Actions": [
+                                   {
+                                   "title": "Done",
+                                   "identifier": "MarkAsRead"
+                                   },
+                                   {
+                                   "title": "Later",
+                                   "identifier": "NotNow"
+                                   }
+                                   ],
+    
+    "costomKey": {
+        "calendar":"Reminders"
+        "color":"00A1F4"
+        "priority":"High"
+    }
+}
