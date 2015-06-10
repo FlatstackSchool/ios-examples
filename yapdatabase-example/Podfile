@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'yapdatabase-example' do
+
+pod 'YapDatabase', '=2.6.4'
+
+end
+
+target 'yapdatabase-exampleTests' do
+
+end
+

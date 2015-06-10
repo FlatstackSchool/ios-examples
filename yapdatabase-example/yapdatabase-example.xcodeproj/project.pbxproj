@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1764C6191B205B4000BAC91D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1764C6181B205B4000BAC91D /* main.m */; };
+		1764C61C1B205B4000BAC91D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1764C61B1B205B4000BAC91D /* AppDelegate.m */; };
+		1764C61F1B205B4000BAC91D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1764C61E1B205B4000BAC91D /* ViewController.m */; };
+		1764C6221B205B4000BAC91D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1764C6201B205B4000BAC91D /* Main.storyboard */; };
+		1764C6241B205B4000BAC91D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1764C6231B205B4000BAC91D /* Images.xcassets */; };
+		1764C6271B205B4000BAC91D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1764C6251B205B4000BAC91D /* LaunchScreen.xib */; };
+		1764C6331B205B4000BAC91D /* yapdatabase_exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1764C6321B205B4000BAC91D /* yapdatabase_exampleTests.m */; };
+		1764C64B1B208C3100BAC91D /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1764C64A1B208C3100BAC91D /* DataBaseManager.m */; };
+		1764C64E1B20972400BAC91D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1764C64D1B20972400BAC91D /* Person.m */; };
+		D63373A5C2533A5DEE7CEB2C /* libPods-yapdatabase-example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2F573A30AC11C51574C191 /* libPods-yapdatabase-example.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1764C62D1B205B4000BAC91D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1764C60B1B205B4000BAC91D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1764C6121B205B4000BAC91D;
+			remoteInfo = "yapdatabase-example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1764C6131B205B4000BAC91D /* yapdatabase-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yapdatabase-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1764C6171B205B4000BAC91D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1764C6181B205B4000BAC91D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1764C61A1B205B4000BAC91D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1764C61B1B205B4000BAC91D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1764C61D1B205B4000BAC91D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1764C61E1B205B4000BAC91D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1764C6211B205B4000BAC91D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1764C6231B205B4000BAC91D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1764C6261B205B4000BAC91D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1764C62C1B205B4000BAC91D /* yapdatabase-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yapdatabase-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1764C6311B205B4000BAC91D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1764C6321B205B4000BAC91D /* yapdatabase_exampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yapdatabase_exampleTests.m; sourceTree = "<group>"; };
+		1764C6491B208C3100BAC91D /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
+		1764C64A1B208C3100BAC91D /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
+		1764C64C1B20972400BAC91D /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		1764C64D1B20972400BAC91D /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		1AE0C9A958AD4819409D4960 /* Pods-yapdatabase-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yapdatabase-example.release.xcconfig"; path = "Pods/Target Support Files/Pods-yapdatabase-example/Pods-yapdatabase-example.release.xcconfig"; sourceTree = "<group>"; };
+		1E2F573A30AC11C51574C191 /* libPods-yapdatabase-example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-yapdatabase-example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		996F0A35E220A3EA4EE1B88E /* Pods-yapdatabase-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yapdatabase-example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yapdatabase-example/Pods-yapdatabase-example.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1764C6101B205B4000BAC91D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D63373A5C2533A5DEE7CEB2C /* libPods-yapdatabase-example.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1764C6291B205B4000BAC91D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1764C60A1B205B4000BAC91D = {
+			isa = PBXGroup;
+			children = (
+				1764C6151B205B4000BAC91D /* yapdatabase-example */,
+				1764C62F1B205B4000BAC91D /* yapdatabase-exampleTests */,
+				1764C6141B205B4000BAC91D /* Products */,
+				56EFFD4A5F37AFC6C937512D /* Pods */,
+				593FE94255F1A074F0300CEC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1764C6141B205B4000BAC91D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1764C6131B205B4000BAC91D /* yapdatabase-example.app */,
+				1764C62C1B205B4000BAC91D /* yapdatabase-exampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1764C6151B205B4000BAC91D /* yapdatabase-example */ = {
+			isa = PBXGroup;
+			children = (
+				1764C61A1B205B4000BAC91D /* AppDelegate.h */,
+				1764C61B1B205B4000BAC91D /* AppDelegate.m */,
+				1764C61D1B205B4000BAC91D /* ViewController.h */,
+				1764C61E1B205B4000BAC91D /* ViewController.m */,
+				1764C6201B205B4000BAC91D /* Main.storyboard */,
+				1764C6231B205B4000BAC91D /* Images.xcassets */,
+				1764C6251B205B4000BAC91D /* LaunchScreen.xib */,
+				1764C6161B205B4000BAC91D /* Supporting Files */,
+				1764C6491B208C3100BAC91D /* DataBaseManager.h */,
+				1764C64A1B208C3100BAC91D /* DataBaseManager.m */,
+				1764C64C1B20972400BAC91D /* Person.h */,
+				1764C64D1B20972400BAC91D /* Person.m */,
+			);
+			path = "yapdatabase-example";
+			sourceTree = "<group>";
+		};
+		1764C6161B205B4000BAC91D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1764C6171B205B4000BAC91D /* Info.plist */,
+				1764C6181B205B4000BAC91D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1764C62F1B205B4000BAC91D /* yapdatabase-exampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				1764C6321B205B4000BAC91D /* yapdatabase_exampleTests.m */,
+				1764C6301B205B4000BAC91D /* Supporting Files */,
+			);
+			path = "yapdatabase-exampleTests";
+			sourceTree = "<group>";
+		};
+		1764C6301B205B4000BAC91D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1764C6311B205B4000BAC91D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56EFFD4A5F37AFC6C937512D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				996F0A35E220A3EA4EE1B88E /* Pods-yapdatabase-example.debug.xcconfig */,
+				1AE0C9A958AD4819409D4960 /* Pods-yapdatabase-example.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		593FE94255F1A074F0300CEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E2F573A30AC11C51574C191 /* libPods-yapdatabase-example.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1764C6121B205B4000BAC91D /* yapdatabase-example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1764C6361B205B4000BAC91D /* Build configuration list for PBXNativeTarget "yapdatabase-example" */;
+			buildPhases = (
+				0F30B11B2AC16689B691B9B1 /* Check Pods Manifest.lock */,
+				1764C60F1B205B4000BAC91D /* Sources */,
+				1764C6101B205B4000BAC91D /* Frameworks */,
+				1764C6111B205B4000BAC91D /* Resources */,
+				9EDFF5F0EEF3373F205A6A8E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "yapdatabase-example";
+			productName = "yapdatabase-example";
+			productReference = 1764C6131B205B4000BAC91D /* yapdatabase-example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1764C62B1B205B4000BAC91D /* yapdatabase-exampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1764C6391B205B4000BAC91D /* Build configuration list for PBXNativeTarget "yapdatabase-exampleTests" */;
+			buildPhases = (
+				1764C6281B205B4000BAC91D /* Sources */,
+				1764C6291B205B4000BAC91D /* Frameworks */,
+				1764C62A1B205B4000BAC91D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1764C62E1B205B4000BAC91D /* PBXTargetDependency */,
+			);
+			name = "yapdatabase-exampleTests";
+			productName = "yapdatabase-exampleTests";
+			productReference = 1764C62C1B205B4000BAC91D /* yapdatabase-exampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1764C60B1B205B4000BAC91D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Nikita Asabin";
+				TargetAttributes = {
+					1764C6121B205B4000BAC91D = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					1764C62B1B205B4000BAC91D = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 1764C6121B205B4000BAC91D;
+					};
+				};
+			};
+			buildConfigurationList = 1764C60E1B205B4000BAC91D /* Build configuration list for PBXProject "yapdatabase-example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1764C60A1B205B4000BAC91D;
+			productRefGroup = 1764C6141B205B4000BAC91D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1764C6121B205B4000BAC91D /* yapdatabase-example */,
+				1764C62B1B205B4000BAC91D /* yapdatabase-exampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1764C6111B205B4000BAC91D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1764C6221B205B4000BAC91D /* Main.storyboard in Resources */,
+				1764C6271B205B4000BAC91D /* LaunchScreen.xib in Resources */,
+				1764C6241B205B4000BAC91D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1764C62A1B205B4000BAC91D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F30B11B2AC16689B691B9B1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9EDFF5F0EEF3373F205A6A8E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yapdatabase-example/Pods-yapdatabase-example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1764C60F1B205B4000BAC91D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1764C64B1B208C3100BAC91D /* DataBaseManager.m in Sources */,
+				1764C61F1B205B4000BAC91D /* ViewController.m in Sources */,
+				1764C64E1B20972400BAC91D /* Person.m in Sources */,
+				1764C61C1B205B4000BAC91D /* AppDelegate.m in Sources */,
+				1764C6191B205B4000BAC91D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1764C6281B205B4000BAC91D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1764C6331B205B4000BAC91D /* yapdatabase_exampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1764C62E1B205B4000BAC91D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1764C6121B205B4000BAC91D /* yapdatabase-example */;
+			targetProxy = 1764C62D1B205B4000BAC91D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1764C6201B205B4000BAC91D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1764C6211B205B4000BAC91D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1764C6251B205B4000BAC91D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1764C6261B205B4000BAC91D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1764C6341B205B4000BAC91D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1764C6351B205B4000BAC91D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1764C6371B205B4000BAC91D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996F0A35E220A3EA4EE1B88E /* Pods-yapdatabase-example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "yapdatabase-example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1764C6381B205B4000BAC91D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AE0C9A958AD4819409D4960 /* Pods-yapdatabase-example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "yapdatabase-example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1764C63A1B205B4000BAC91D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "yapdatabase-exampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yapdatabase-example.app/yapdatabase-example";
+			};
+			name = Debug;
+		};
+		1764C63B1B205B4000BAC91D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "yapdatabase-exampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yapdatabase-example.app/yapdatabase-example";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1764C60E1B205B4000BAC91D /* Build configuration list for PBXProject "yapdatabase-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1764C6341B205B4000BAC91D /* Debug */,
+				1764C6351B205B4000BAC91D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1764C6361B205B4000BAC91D /* Build configuration list for PBXNativeTarget "yapdatabase-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1764C6371B205B4000BAC91D /* Debug */,
+				1764C6381B205B4000BAC91D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1764C6391B205B4000BAC91D /* Build configuration list for PBXNativeTarget "yapdatabase-exampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1764C63A1B205B4000BAC91D /* Debug */,
+				1764C63B1B205B4000BAC91D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1764C60B1B205B4000BAC91D /* Project object */;
+}
