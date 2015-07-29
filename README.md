@@ -4,7 +4,6 @@
 * [WatchKit example](/RemindersWidget) (Пример использования WatchKit)
 * [Reminders example](/RemindersWidget) (Пример использования Напоминаний)
 * [Today Extension example](/RemindersWidget) (Пример использования виджетов)
-* [MKStoreKit example](/MKStoreKitExample) (Пример использования MKStoreKit)
 
 #Cocoa
 
