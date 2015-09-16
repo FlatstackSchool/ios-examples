@@ -41,16 +41,22 @@ class FirstVisualViewController: UIViewController {
         self.blueView.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.yellowView.setTranslatesAutoresizingMaskIntoConstraints(false)
         
-        // Views to add constraints to
-        let views = Dictionary(dictionaryLiteral: ("red", self.redView), ("blue", self.blueView), ("green", self.greenView))
+        //Views to add constraints to
+        let views = Dictionary(dictionaryLiteral: ("red",self.redView),("blue",self.blueView),("green",self.greenView))
+        //Metrics for Visual Format string
+        let metrics = Dictionary(dictionaryLiteral: ("spacing", 10),("lowWidth",100),("highWidth",200),("priority",20),("redBlueSpacing",0),("greenHeight",40))
         
-        // Horizontal constraints
-        let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|[red]|", options: nil, metrics: nil, views: views)
-        self.view.addConstraints(horizontalConstraints)
+        //Horizontal constraints
+        let horizontalConstraintsRedBlue = NSLayoutConstraint.constraintsWithVisualFormat("H:|-spacing-[red(>=lowWidth,<=highWidth@priority)]-redBlueSpacing-[blue(==red)]-spacing-|", options: nil, metrics: metrics, views: views)
+        self.view.addConstraints(horizontalConstraintsRedBlue)
+        let horizontalConstraintsGreen = NSLayoutConstraint.constraintsWithVisualFormat("H:|[green]|", options: nil, metrics: nil, views: views)
+        self.view.addConstraints(horizontalConstraintsGreen)
         
-        // Vertical constraints
-        let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[red]|", options: nil, metrics: nil, views: views)
-        self.view.addConstraints(verticalConstraints)
+        //Vertical constraints
+        let verticalConstraintsRed = NSLayoutConstraint.constraintsWithVisualFormat("V:|[red]-spacing-[green(greenHeight)]|", options: nil, metrics: metrics, views: views)
+        self.view.addConstraints(verticalConstraintsRed)
+        let verticalConstraintsBlue = NSLayoutConstraint.constraintsWithVisualFormat("V:|[blue]|", options: nil, metrics: metrics, views: views)
+        self.view.addConstraints(verticalConstraintsBlue)
         
     }
 
