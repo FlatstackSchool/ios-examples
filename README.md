@@ -5,6 +5,7 @@
 * [Reminders example](/RemindersWidget) (Пример использования Напоминаний)
 * [Today Extension example](/RemindersWidget) (Пример использования виджетов)
 * [LayoutFrameworks example](/LayoutFrameworks) (Пример создания констрейнтов с помощью Apple Visual Format)
+* [AFNetworking example](/AFNetworkingExample) (Пример использования AFNetworking. Рекомендацию по использованию.)
 
 #Cocoa
 
