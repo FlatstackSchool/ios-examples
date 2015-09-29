@@ -122,7 +122,9 @@ class MasterViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Clear Cache", style: UIBarButtonItemStyle.Plain, target: self, action: Selector.init(stringLiteral: "flushCache"))
         
         //immediately start downloading images in JPG
-        SDWebImagePrefetcher.sharedImagePrefetcher().prefetchURLs(self.objects[4].convertUrlsToNSURL())
+        if testCustomCache == false {
+            SDWebImagePrefetcher.sharedImagePrefetcher().prefetchURLs(self.objects[4].convertUrlsToNSURL())
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -172,13 +174,13 @@ extension MasterViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier.Cell.rawValue, forIndexPath: indexPath) as! TableViewCell
         
-        let url = NSURL.init(string: self.objects[indexPath.section].urls[indexPath.row])
-        
         cell.rightLabelView?.text = "Image \(indexPath.row + 1)"
         
         cell.indicatorView.startAnimating()
         
         if testCustomCache {
+            
+            let url = NSURL.init(string: self.objects[indexPath.section].urls[indexPath.row].stringByReplacingOccurrencesOfString("160x120", withString: "1920x1280"))
             
             cell.operation =
                 FSWebImageManager.sharedManager().downloadImageWithURL(url!, types:[.Original, .Thumbnail, .Blur], options : indexPath.row == 0 ? SDWebImageOptions.RefreshCached : SDWebImageOptions.init(rawValue: 0), completed: { (images, error, cacheType, finished, imageURL) -> Void in
@@ -193,6 +195,8 @@ extension MasterViewController {
                 cell.indicatorView.stopAnimating()
             })
         } else {
+            let url = NSURL.init(string: self.objects[indexPath.section].urls[indexPath.row])
+            
             cell.leftImageView.sd_setImageWithURL(url, placeholderImage: UIImage.init(named: "placeholder"), options: indexPath.row == 0 ? SDWebImageOptions.RefreshCached : SDWebImageOptions.init(rawValue: 0)) { (image, error, cacheType, imageURL) -> Void in
                 
                 debugPrint("----------------------------------------(\(indexPath.row))")

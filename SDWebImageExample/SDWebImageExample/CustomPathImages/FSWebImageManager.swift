@@ -37,14 +37,16 @@ class FSWebImageManager : SDWebImageManager {
     func downloadImageWithURL(url: NSURL, types:Set<FSImageCacheType> = FSImageCacheType.allTypes(), options: SDWebImageOptions, progress progressBlock: SDWebImageDownloaderProgressBlock? = nil, completed completedBlock:FSWebImageCompletionWithFinishedBlock? = nil) -> SDWebImageOperation! {
 
         let key = super.cacheKeyForURL(url)
+        for type in types {
+            if self.fsImageCache.diskImageExistsWithKey(key, type: type) == false {
+                self.fsImageCache.removeImageForKey(key, type: .Original)
+                break
+            }
+        }
         
         return super.downloadImageWithURL(url, options: options, progress: progressBlock) {[weak self] (image, error, cacheType, finished, imageURL) -> Void in
             
             if let sself = self {
-                let substractTypes = FSImageCacheType.allTypes().subtract(types.union([.Original]))
-                for substractType in substractTypes {
-                    sself.fsImageCache.removeImageForKey(key, type: substractType)
-                }
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     

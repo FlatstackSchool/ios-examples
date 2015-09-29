@@ -31,7 +31,7 @@ class DetailViewController: UIViewController {
         
         if testCustomCache {
             let key = FSWebImageManager.sharedManager().cacheKeyForURL(self.imageURL)
-            if let image = FSWebImageManager.sharedManager().fsImageCache.imageFromDiskCacheForKey(key, type: .Blur) {
+            if let image = FSWebImageManager.sharedManager().fsImageCache.imageFromDiskCacheForKey(key, type: .Original) {
                 self.imageView?.image = image
                 self.imageView?.setNeedsDisplay()
             }

@@ -79,7 +79,7 @@ class FSImageCache: SDImageCache {
                     return image.fsCache_resizeProportionalRelativelyBigSide(size)
                 }
             } else {
-                return nil
+                return image
             }
             
         case .Blur where image.images == nil:
@@ -246,7 +246,4 @@ extension FSImageCache {
         SDImageCache.sharedImageCache().clearMemory()
     }
 }
-
-//MARK: - UIImage helper
-
 

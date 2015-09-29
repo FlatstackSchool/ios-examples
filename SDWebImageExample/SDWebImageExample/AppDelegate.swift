@@ -8,7 +8,7 @@
 
 import UIKit
 
-let testCustomCache = true
+let testCustomCache = false
 
 
 @UIApplicationMain
