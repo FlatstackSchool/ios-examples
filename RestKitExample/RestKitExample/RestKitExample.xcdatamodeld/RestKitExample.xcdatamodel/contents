@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="14F27" minimumToolsVersion="Automatic">
+    <entity name="Calendar" representedClassName="Calendar" syncable="YES">
+        <attribute name="detailDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Category" inverseName="calendars" inverseEntity="Category" syncable="YES"/>
+    </entity>
+    <entity name="Category" representedClassName="Category" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="calendars" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Calendar" inverseName="categories" inverseEntity="Calendar" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Calendar" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Category" positionX="-45" positionY="27" width="128" height="75"/>
+    </elements>
+</model>

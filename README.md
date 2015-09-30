@@ -7,6 +7,7 @@
 * [LayoutFrameworks example](/LayoutFrameworks) (Пример создания констрейнтов с помощью Apple Visual Format)
 * [AFNetworking example](/AFNetworkingExample) (Пример использования AFNetworking. Рекомендацию по использованию.)
 * [SDWebImage example](/SDWebImageExample) (Пример использования SDWebImage)
+* [RestKit example](/RestKitExample) (Пример использования RestKit)
 
 #Cocoa
 
