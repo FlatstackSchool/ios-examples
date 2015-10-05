@@ -9,7 +9,7 @@ CREATE TABLE `images_store` (
   `filename` char(50) DEFAULT NULL,
   `bin_data` longblob,
   `filetype` char(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=117 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
 
 --
 -- Индексы таблицы `images_store`
