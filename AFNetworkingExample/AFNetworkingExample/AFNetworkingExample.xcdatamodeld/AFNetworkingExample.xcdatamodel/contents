@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AFImage" representedClassName="AFImage" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Transformable" valueTransformerName="ValueTransformer" syncable="YES">
+            <userInfo>
+                <entry key="attributeValueClassName" value="UIImage"/>
+            </userInfo>
+        </attribute>
+        <attribute name="mime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serverID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <userInfo>
+            <entry key="relatedByAttribute" value="serverID"/>
+        </userInfo>
+    </entity>
+    <entity name="AFObject" representedClassName="AFObject" syncable="YES">
+        <attribute name="attributes" optional="YES" attributeType="Transformable" syncable="YES">
+            <userInfo>
+                <entry key="attributeValueClassName" value="NSDictionary"/>
+            </userInfo>
+        </attribute>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="serverID" optional="YES" attributeType="Integer 64" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <userInfo>
+            <entry key="relatedByAttribute" value="serverID"/>
+        </userInfo>
+    </entity>
+    <elements>
+        <element name="AFImage" positionX="-45" positionY="27" width="128" height="105"/>
+        <element name="AFObject" positionX="-45" positionY="0" width="128" height="105"/>
+    </elements>
+</model>
