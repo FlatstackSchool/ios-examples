@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21DB8E921D64651800A35A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB8E911D64651800A35A4F /* AppDelegate.swift */; };
+		21DB8E971D64651800A35A4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DB8E951D64651800A35A4F /* Main.storyboard */; };
+		21DB8E991D64651800A35A4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21DB8E981D64651800A35A4F /* Assets.xcassets */; };
+		21DB8E9C1D64651800A35A4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DB8E9A1D64651800A35A4F /* LaunchScreen.storyboard */; };
+		21DB8EA51D646D7C00A35A4F /* OnePasswordExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DB8EA41D646D7C00A35A4F /* OnePasswordExtension.framework */; };
+		21DB8EA71D64715600A35A4F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB8EA61D64715600A35A4F /* SignInViewController.swift */; };
+		21DB8EA91D64718500A35A4F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB8EA81D64718500A35A4F /* SignUpViewController.swift */; };
+		21DB8EAB1D647B2000A35A4F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB8EAA1D647B2000A35A4F /* Constants.swift */; };
+		21DB8EAD1D6482EB00A35A4F /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB8EAC1D6482EB00A35A4F /* ChangePasswordViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		21DB8E8E1D64651800A35A4F /* 1PasswordIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1PasswordIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21DB8E911D64651800A35A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		21DB8E961D64651800A35A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21DB8E981D64651800A35A4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21DB8E9B1D64651800A35A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		21DB8E9D1D64651800A35A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21DB8EA41D646D7C00A35A4F /* OnePasswordExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OnePasswordExtension.framework; path = Carthage/Build/iOS/OnePasswordExtension.framework; sourceTree = "<group>"; };
+		21DB8EA61D64715600A35A4F /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		21DB8EA81D64718500A35A4F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		21DB8EAA1D647B2000A35A4F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		21DB8EAC1D6482EB00A35A4F /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21DB8E8B1D64651800A35A4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21DB8EA51D646D7C00A35A4F /* OnePasswordExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21DB8E851D64651800A35A4F = {
+			isa = PBXGroup;
+			children = (
+				21DB8EA41D646D7C00A35A4F /* OnePasswordExtension.framework */,
+				21DB8E901D64651800A35A4F /* 1PasswordIntegration */,
+				21DB8E8F1D64651800A35A4F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		21DB8E8F1D64651800A35A4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21DB8E8E1D64651800A35A4F /* 1PasswordIntegration.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21DB8E901D64651800A35A4F /* 1PasswordIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				21DB8EAA1D647B2000A35A4F /* Constants.swift */,
+				21DB8E911D64651800A35A4F /* AppDelegate.swift */,
+				21DB8EA61D64715600A35A4F /* SignInViewController.swift */,
+				21DB8EA81D64718500A35A4F /* SignUpViewController.swift */,
+				21DB8EAC1D6482EB00A35A4F /* ChangePasswordViewController.swift */,
+				21DB8E951D64651800A35A4F /* Main.storyboard */,
+				21DB8E981D64651800A35A4F /* Assets.xcassets */,
+				21DB8E9A1D64651800A35A4F /* LaunchScreen.storyboard */,
+				21DB8E9D1D64651800A35A4F /* Info.plist */,
+			);
+			path = 1PasswordIntegration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21DB8E8D1D64651800A35A4F /* 1PasswordIntegration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21DB8EA01D64651800A35A4F /* Build configuration list for PBXNativeTarget "1PasswordIntegration" */;
+			buildPhases = (
+				21DB8E8A1D64651800A35A4F /* Sources */,
+				21DB8E8B1D64651800A35A4F /* Frameworks */,
+				21DB8E8C1D64651800A35A4F /* Resources */,
+				21DB8EA31D646D3000A35A4F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 1PasswordIntegration;
+			productName = 1PasswordIntegration;
+			productReference = 21DB8E8E1D64651800A35A4F /* 1PasswordIntegration.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21DB8E861D64651800A35A4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Flatstack;
+				TargetAttributes = {
+					21DB8E8D1D64651800A35A4F = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 21DB8E891D64651800A35A4F /* Build configuration list for PBXProject "1PasswordIntegration" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 21DB8E851D64651800A35A4F;
+			productRefGroup = 21DB8E8F1D64651800A35A4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21DB8E8D1D64651800A35A4F /* 1PasswordIntegration */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21DB8E8C1D64651800A35A4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21DB8E9C1D64651800A35A4F /* LaunchScreen.storyboard in Resources */,
+				21DB8E991D64651800A35A4F /* Assets.xcassets in Resources */,
+				21DB8E971D64651800A35A4F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21DB8EA31D646D3000A35A4F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/OnePasswordExtension.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21DB8E8A1D64651800A35A4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21DB8EA91D64718500A35A4F /* SignUpViewController.swift in Sources */,
+				21DB8EA71D64715600A35A4F /* SignInViewController.swift in Sources */,
+				21DB8E921D64651800A35A4F /* AppDelegate.swift in Sources */,
+				21DB8EAD1D6482EB00A35A4F /* ChangePasswordViewController.swift in Sources */,
+				21DB8EAB1D647B2000A35A4F /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		21DB8E951D64651800A35A4F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21DB8E961D64651800A35A4F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		21DB8E9A1D64651800A35A4F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21DB8E9B1D64651800A35A4F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21DB8E9E1D64651800A35A4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		21DB8E9F1D64651800A35A4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21DB8EA11D64651800A35A4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Christopher Schultz (Q5NM9YSVCD)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = 1PasswordIntegration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FS.-PasswordIntegration";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3be07c59-e6b6-48cb-9ce8-f83ab81647c8";
+			};
+			name = Debug;
+		};
+		21DB8EA21D64651800A35A4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = 1PasswordIntegration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FS.-PasswordIntegration";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21DB8E891D64651800A35A4F /* Build configuration list for PBXProject "1PasswordIntegration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21DB8E9E1D64651800A35A4F /* Debug */,
+				21DB8E9F1D64651800A35A4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21DB8EA01D64651800A35A4F /* Build configuration list for PBXNativeTarget "1PasswordIntegration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21DB8EA11D64651800A35A4F /* Debug */,
+				21DB8EA21D64651800A35A4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21DB8E861D64651800A35A4F /* Project object */;
+}
